@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=EB+Garamond:ital@0;1&family=Roboto&family=Roboto+Condensed&family=Satisfy&display=swap');
+
+body {
+    font-family: Roboto;
+    margin: 30px;
+    background: #eee;
+    height: auto;
+}
+
+h1 {
+    padding: auto;
+    margin: -10px;
+    color: rgb(0, 18, 97);
+    font-family: Alkatra;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-orientation: upright;
+    text-shadow: 2px 2px #0051ff;
+}
+
+h2 {
+    font-family: Alkatra;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-top: -50px;
+    text-transform: capitalize;
+
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 20px 0px 30px rgba(0, 0, 0, 0.8), -20px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+#landing_txt_inner {
+    margin: auto;
+    padding: 10px;
+    background: url(imgs/back.jpg);
+    width: 100%;
+    background-size: 100%;
+}
+
+#landing_txt {
+    background-color: #c1c4cc;
+    display: flex;
+    flex: 0 1 40vw;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+#landing_txt h2 {
+    position: relative;
+    display: block;
+    margin-top: -20px;
+    color: #0051ff;
+    text-shadow: 1.4px 1.4px rgb(0, 18, 97);
+}
+
+#para {
+    padding: 0;
+    font-family: EB Garamond;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(0, 18, 97);
+}
+
+#landing_img {
+    display: block;
+    background: url(imgs/camara_NEW.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    height: 250px;
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: 2px #0051ff solid;
+    display: inline-block;
+    margin: 0.5rem;
+    border-radius: 40px;
+    background-color: rgb(0, 18, 97);
+    color: #fff;
+    text-shadow: 2px 2px 10px;
+    text-decoration: none;
+    transition: background500ms ease;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    color: rgb(0, 18, 97);
+    text-shadow: none;
+}
+
+#header {
+    padding: 1.5rem;
+    text-align: center;
+    background: #333;
+    color: #f4f4f4;
+}
+
+#header h2 {
+    border-left: dotted 1px #fff; 
+    border-right: dotted 1px #fff;
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.caption {
+    padding: 0.5rem;
+    font-size: auto;
+    text-align: center;
+    margin: auto;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: auto;
+    color: #333;
+}
+
+footer h3 {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+footer p {
+    font-size: 1.3rem;
+    margin: 0.5rem;
+}
