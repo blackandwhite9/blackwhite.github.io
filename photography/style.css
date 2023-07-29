@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Alkatra&family=EB+Garamond:ital@0;1&family=Roboto&family=Roboto+Condensed&family=Satisfy&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Roboto;
     margin: 30px;
@@ -9,13 +13,39 @@ body {
 
 h1 {
     padding: auto;
+    border-right: 3px solid rgb(0, 128, 0, 0.7);
+    overflow: hidden;
+    white-space: nowrap;
     margin: -10px;
     color: rgb(0, 18, 97);
     font-family: Alkatra;
-    font-size: 2.5rem;
+    font-size: clamp(30px,5vw,50px);
+    text-align: center;
+    justify-content: center;
     text-transform: uppercase;
     text-orientation: upright;
     text-shadow: 2px 2px #0051ff;
+}
+/*Animation*/
+#h1txt {
+    animation: animated-text 4s steps(15, end),
+               animated-cursor .75s step-end infinite;
+}
+
+/*text animation*/
+@keyframes animated-text {
+    from{width: 0;}
+    to {width: 100%;}
+}
+
+/*cursor animation*/
+@keyframes animated-cursor {
+    from, to {border-color: transparent}
+    50% {border-color: rgba(0, 128, 0, 0.7);}
+}
+
+#hitext {
+    display: none;
 }
 
 h2 {
@@ -39,29 +69,31 @@ main {
 }
 
 #landing_txt_inner {
-    margin: auto;
-    padding: 10px;
-    background: url(imgs/back.jpg);
+    margin: 0.2rem;
+    padding: 5px;
     width: 100%;
     background-size: 100%;
 }
 
 #landing_txt {
+    background: url(imgs/back.jpg);
     background-color: #c1c4cc;
+    background-size: cover;
+    background-position: top;
     display: flex;
     flex: 0 1 40vw;
-    height: 70vh;
+    height: 80vh;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
 
 #landing_txt h2 {
     position: relative;
     display: block;
-    margin-top: -20px;
+    margin-top: -10px;
     color: #0051ff;
     text-shadow: 1.4px 1.4px rgb(0, 18, 97);
 }
@@ -75,18 +107,17 @@ main {
 }
 
 #landing_img {
-    display: block;
+    position: relative;
     background: url(imgs/camara_NEW.jpg);
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-
-    height: 250px;
-    margin: 0;
-    padding: 0;
+    height: 390px;
+    margin: auto;
+    
 }
 
-.btn {
+#view_work {
     padding: 1rem 2rem;
     border: 2px #0051ff solid;
     display: inline-block;
@@ -99,11 +130,70 @@ main {
     transition: background500ms ease;
 }
 
-.btn:hover {
+#view_work:hover {
     background-color: #ffffff;
     color: rgb(0, 18, 97);
     text-shadow: none;
 }
+
+/* social icon */
+
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.icon_group {
+    width: 55px;
+    height: 55px;
+    font-family: Alkatra;
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -3px -3px 10px rgba(0, 0, 0, 0.3);
+    transition: .2s ease;
+}
+
+.icon_group span {
+    width: 0px;
+    text-align: center;
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+.icon_group:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.icon_group:hover {
+    width: 190px;
+    border-radius: 35px;
+}
+
+.icon_group:hover span {
+    padding-left: 5px;
+    width: max-content;
+}
+
+.icon_group:focus {
+    box-shadow: 5px 5px 0 rgb(60, 255, 0);
+}
+
+/*header*/
 
 #header {
     padding: 1.5rem;
@@ -120,11 +210,17 @@ main {
     padding-right: 1rem;
 }
 
+#images > img {
+    position: relative;
+    padding: 30px;
+}
+
 .caption {
     padding: 0.5rem;
-    font-size: auto;
+    font-size: 1rem;
     text-align: center;
     margin: auto;
+    background: linear-gradient(#ffffff7e, #6ea1ff);
     color: #333;
 }
 
@@ -143,4 +239,52 @@ footer h3 {
 footer p {
     font-size: 1.3rem;
     margin: 0.5rem;
+}
+
+@media (max-width: 800px) {
+    body {
+        margin: 20px;
+    }
+
+    .social_icon{
+        flex-direction: column;
+    }
+
+    .icon_group {
+        width: 180px;
+        border-radius: 35px;
+    }
+
+    .icon_group span {
+        width: max-content;
+    }
+
+    #landing_img {
+        height: 210px;
+    }
+
+    #images > img {
+        padding: 0;
+    }
+
+    #h1txt {
+        display: none;
+    }
+
+    #hitext {
+        display: block;
+        border: 0;
+        white-space: normal;
+    }
+
+}
+
+@media (max-width: 442px) {
+    h1 {
+        padding-bottom: 50px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
 }
