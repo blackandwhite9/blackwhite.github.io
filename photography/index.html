@@ -5,12 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black&White</title>
-    <link rel="stylesheet" href="style_anim.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <main>
+  <main id="m">
+    <header class="nav_header">
+      <div class="logo">
+        <span>Black&White</span>
+      </div>
+
+      <div class="nav_list">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li class="proh hover"><span>Project</span>
+          <ul class="pro_list">
+            <li><a href="https://kdsdksk.github.io/" target="_blank">Back Jack Game</a></li>
+            <li><a href="https://kdsdksk.github.io/new_year" target="_blank">New Year Countdown</a></li>
+          </ul>
+        </li>
+          <li><a href="error.html" target="_blank">About Us</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="toggle_btn">
+        <ul>
+          <li class="top_line"></li>
+          <li class="middle_line"></li>
+          <li class="bottom_line"></li>
+        </ul>
+      </div>
+      
+    </header>
+
+    <div class="dropdown_menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="project_sub"><span>Project</span></li>
+          <div class="sub_menu">
+            <ul>
+              <li><a href="https://kdsdksk.github.io/" target="_blank">Back Jack Game</a></li>
+              <li><a href="https://kdsdksk.github.io/new_year" target="_blank">New Year Countdown</a></li>
+            </ul>
+          </div>
+          <li><a href="error.html" target="_blank">About Us</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+    </div>
+
         <div id="landing">
             <div id="landing_txt">
 
@@ -338,24 +382,21 @@
                 <h3>Color Gradient...!!! & Retouch</h3>
             </div>
         </div>
-    </main>
+  </main>
 
-    <footer>
-        <h3>Get in touch</h3>
-        <p>Email or Call us</p>
-        <p>Email:
-            <strong>surangadarshana68@gmail.com</strong>
-        </p>
-
-        <p>Whatsapp:
-            <strong>+94711444571</strong>
-        </p>
-
-        <p>Phone:
-            <strong>+94711444571</strong>
-        </p>
-
-    </footer>
+  <footer id="footer">
+      <h3>Get in touch</h3>
+      <p>Email or Call us</p>
+      <p>Email:
+          <strong>surangadarshana68@gmail.com</strong>
+      </p>
+      <p>Whatsapp:
+          <strong>+94711444571</strong>
+      </p>
+      <p>Phone:
+          <strong>+94711444571</strong>
+      </p>
+  </footer>
 
     <div class="gradent">
         <svg width="0" height="0">
@@ -368,7 +409,8 @@
             </radialGradient>
           </svg>
     </div>
+
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>    
+    <script src="script.js"></script>
 </body>
 </html>

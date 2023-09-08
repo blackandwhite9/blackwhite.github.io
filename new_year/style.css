@@ -404,8 +404,7 @@ footer P {
     }
 
     footer {
-        bottom: 0;
-        margin-bottom: -16%;
+        display: none;
     }
     
 }
