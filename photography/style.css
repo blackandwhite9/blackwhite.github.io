@@ -501,7 +501,7 @@ a {
     background: rgb(255, 255, 255);
     border-radius: 50%;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), -3px -3px 10px rgba(0, 0, 0, 0.3);
-    transition: .2s ease;
+    transition: .3s ease;
 }
 
 .icon_group span {
@@ -588,7 +588,7 @@ section {
   background-position: center;
   background-size: cover;
   width: 380px;
-  filter: blur(4px);
+  filter: blur(2px);
 }
 
 .swiper-slide-active {
